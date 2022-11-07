@@ -6,6 +6,7 @@
   --footer-and-hero-color: #2f303a;
   --secondary-bg-color: #f5f4fa;
   --borders-color: #afb1b8;
+  --hover-accent-color: #188ce8;
 }
 
 /* стилизация ссылок и т.п. */
@@ -89,7 +90,7 @@ p {
 .header-nav {
   display: flex;
 }
-.header-nav .item + .item {
+.header-nav .item:not(:first-child){
   margin-left: 50px;
 }
 .header-nav.contacts .item:not(:first-child) {
@@ -222,6 +223,57 @@ p {
   background-color: var(--accent-color);
   fill: var(--primary-white-color);
 }
+.footer-title.form {
+  margin-bottom: 20px;
+}
+.footer-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+
+  align-items: center;
+  text-align: left;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  border: none;
+  padding: 10px 62px 10px 28px;
+  margin-left: 12px;
+  position: relative;
+}
+.footer-button:focus,
+.footer-button:hover {
+  background-color: var(--hover-accent-color);
+}
+.email-footer {
+  width: 360px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 16px;
+  color: var(--primary-white-color);
+}
+.email-footer:focus{
+  outline: 0;
+}
+
+.email-footer::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-send {
+  position: absolute;
+  fill: var(--primary-white-color);
+  right: 28px;
+  bottom: 13px;
+}
 /* index.html */
 /* hero and buttons*/
 .hero {
@@ -262,7 +314,7 @@ p {
 }
 .button-hero:hover,
 .button-hero:focus {
-  background-color: #188ce8;
+  background-color: var(--hover-accent-color);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -310,7 +362,14 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   background-color: var(--primary-white-color);
+  fill: #000;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-close:hover,
+.modal-close:focus {
+  fill: var(--accent-color);
+}
+
 .form-title {
   font-weight: 700;
   font-size: 20px;
@@ -319,6 +378,15 @@ p {
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 12px;
+}
+.form-item {
+  margin-bottom: 10px;
+}
+.form-item:last-child {
+  margin-bottom: 30px;
+}
+.input-text {
+  margin-bottom: 4px;
 }
 .label-title {
   display: flex;
@@ -330,8 +398,6 @@ p {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--primary-p-color);
-  margin-top: 10px;
-  margin-bottom: 10px;
   position: relative;
 }
 
@@ -340,16 +406,34 @@ p {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding-left: 42px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.form-input::placeholder {
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-input:focus {
+  outline: 0;
+  border: 1px solid #2196f3;
+}
+.form-input:focus + .svg-form{
+  fill: var(--accent-color);
+}
+
 .svg-form {
   position: absolute;
-  top: 25px;
-  left: 15px;
+  bottom: 11px;
+  left: 12px;
 }
 .form-input.textarea {
   width: 448px;
   height: 120px;
   resize: none;
+  padding-top: 12px;
+  padding-left: 16px;
 }
 
 .submit-button {
@@ -366,7 +450,7 @@ p {
   cursor: pointer;
 }
 .submit-button:hover {
-  background-color: #188ce8;
+  background-color: var(--hover-accent-color);
 }
 /* наши преимущества */
 

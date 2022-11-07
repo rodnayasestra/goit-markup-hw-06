@@ -58,33 +58,53 @@
           <div class="backdrop is-hidden" data-modal>
             <div class="modal">
               <button type="button" class="modal-close" data-modal-close>
-                <svg width="18px" height="18px">
+                <svg width="18px" height="18px" class="close-icon">
                   <use href="./images/symbol-defs.svg#icon-close"></use>
                 </svg>
               </button>
               <form>
                 <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
-                <label for="username" class="label-title"
-                  >Ім'я
-                  <input type="text" name="name" id="username" class="form-input" />
-                </label>
-                <label for="number" class="label-title"
-                  >Телефон
-                  <input type="tel" name="phone" id="number" class="form-input" />
-                </label>
-                <label for="usermail" class="label-title"
-                  >Пошта
-                  <input type="email" name="mail" id="usermail" class="form-input" />
-                </label>
-                <label for="comment" class="label-title"
-                  >Коментар
-                  <textarea
-                    name="feedback"
-                    id="comment"
-                    class="form-input textarea"
-                    placeholder="Введіть текст"
-                  ></textarea>
-                </label>
+                <ul>
+                  <li class="form-item">
+                    <label for="username" class="label-title">
+                      <span class="input-text">Ім'я</span>
+                      <input type="text" name="name" id="username" class="form-input" />
+                      <svg width="20" height="20" class="svg-form">
+                        <use href="./images/symbol-defs.svg#icon-person"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li class="form-item">
+                    <label for="number" class="label-title"
+                      ><span class="input-text">Телефон</span>
+                      <input type="tel" name="phone" id="number" class="form-input" />
+                      <svg width="20" height="20" class="svg-form">
+                        <use href="./images/symbol-defs.svg#icon-phone"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li class="form-item">
+                    <label for="usermail" class="label-title"
+                      ><span class="input-text">Пошта</span>
+                      <input type="email" name="mail" id="usermail" class="form-input" />
+                      <svg width="20" height="20" class="svg-form">
+                        <use href="./images/symbol-defs.svg#icon-email"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li class="form-item">
+                    <label for="comment" class="label-title"
+                      ><span class="input-text">Коментар</span>
+                      <textarea
+                        name="feedback"
+                        id="comment"
+                        class="form-input textarea"
+                        placeholder="Введіть текст"
+                      ></textarea>
+                    </label>
+                  </li>
+                </ul>
+
                 <button type="submit" class="submit-button">Відправити</button>
               </form>
             </div>
@@ -417,6 +437,21 @@
                 ></a>
               </li>
             </ul>
+          </li>
+
+          <li class="footer-item">
+            <form>
+              <label for="mail"
+                ><h3 class="footer-title form">Підпишіться на розсилку</h3>
+                <input type="email" name="enter-mail" id="mail" class="email-footer" placeholder="E-mail"
+              /></label>
+              <button type="submit" class="footer-button">
+                Підписатися
+                <svg width="24" height="24" class="footer-send">
+                  <use href="./images/symbol-defs.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
           </li>
         </ul>
       </div>
