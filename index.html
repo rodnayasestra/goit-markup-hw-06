@@ -62,7 +62,7 @@
                   <use href="./images/symbol-defs.svg#icon-close"></use>
                 </svg>
               </button>
-              <form>
+              <form class="js-speaker-form">
                 <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
                 <ul>
                   <li class="form-item">
@@ -104,7 +104,13 @@
                     </label>
                   </li>
                 </ul>
-
+                <div class="checkbox">
+                  <input type="checkbox" name="policy" id="check"  value="yes" class="checkbox-input" />
+                  <label for="check" class="checkbox-title"
+                    >Погоджуюся з розсилкою та приймаю
+                    <a href="" class="checkbox-link">Умови договору</a></label
+                  >
+                </div>
                 <button type="submit" class="submit-button">Відправити</button>
               </form>
             </div>
@@ -396,8 +402,8 @@
     <!-- футер -->
     <footer class="footer">
       <div class="container">
-        <ul class="footer-list">
-          <li>
+        <div class="footer-list">
+          <div>
             <a href="./index.html" class="logo"> Web<span class="studio">Studio</span></a>
             <address class="adress">
               <ul>
@@ -408,8 +414,8 @@
                 <li><a href="tel:+380961111111" class="contacts-footer">+38 096 111 11 11</a></li>
               </ul>
             </address>
-          </li>
-          <li class="footer-item">
+          </div>
+          <div class="footer-item">
             <h3 class="footer-title">Приєднуйтесь</h3>
             <ul class="social-media">
               <li>
@@ -437,13 +443,17 @@
                 ></a>
               </li>
             </ul>
-          </li>
-
-          <li class="footer-item">
-            <form>
+          </div>
+          <div class="footer-item">
+            <form class="js-form">
               <label for="mail"
                 ><h3 class="footer-title form">Підпишіться на розсилку</h3>
-                <input type="email" name="enter-mail" id="mail" class="email-footer" placeholder="E-mail"
+                <input
+                  type="email"
+                  name="enter-mail"
+                  id="usermail"
+                  class="email-footer"
+                  placeholder="E-mail"
               /></label>
               <button type="submit" class="footer-button">
                 Підписатися
@@ -452,8 +462,8 @@
                 </svg>
               </button>
             </form>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
