@@ -447,16 +447,9 @@ p {
   margin-bottom: 30px;
 }
 .checkbox-input {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .checkbox-input:checked ~ .checkbox-title::before {
@@ -476,7 +469,7 @@ p {
   height: 15px;
   background-color: #fff;
   vertical-align: middle;
-  margin-right: 7px;
+  margin-right: 8px;
   border: 2px solid #000;
   border-radius: 2px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
