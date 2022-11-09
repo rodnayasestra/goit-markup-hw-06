@@ -399,7 +399,7 @@ p {
   letter-spacing: 0.01em;
   color: var(--primary-p-color);
   position: relative;
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .form-input {
@@ -429,7 +429,8 @@ p {
 .svg-form {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
-  bottom: 11px;
+  bottom: 0;
+  transform: translateY(-50%);
   left: 12px;
 }
 .form-input.textarea {
@@ -444,6 +445,33 @@ p {
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+}
+.checkbox-input {
+   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.checkbox-input:checked ~ .checkbox-title::before{
+  background-color: var(--accent-color);
+  background-image: url('../images/icon-check.svg');
+  background-repeat: no-repeat;
+  background-position: 65% 60%;
+  background-size: 13px 10px;
+  border-color: transparent;
+  background-origin: border-box;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-title::before{
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-color: #fff;
+  vertical-align:middle;
+  margin-right: 7px;
+  border: 2px solid #000;
+  border-radius: 2px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-title {
   font-weight: 400;
