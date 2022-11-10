@@ -387,9 +387,6 @@ p {
   fill: var(--accent-color);
   transform: translateY(-65%);
 }
-.close:hover {
-}
-
 .form-title {
   font-weight: 700;
   font-size: 20px;
@@ -438,10 +435,12 @@ p {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+.form-input:hover,
 .form-input:focus {
   outline: 0;
   border: 1px solid #2196f3;
 }
+.form-input:hover + .svg-form,
 .form-input:focus + .svg-form {
   fill: var(--accent-color);
 }
